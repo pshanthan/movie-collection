@@ -61,13 +61,13 @@ export class ListComponent implements OnInit {
           this.movies = this.movies.map((m) =>
             m.id === this.editingId ? updatedMovie : m,
           );
+          this.editingId = null;
         });
     } else {
       this.movieService.addMovie(transformedMovie).subscribe((addedmovie) => {
         this.movies = [...this.movies, addedmovie];
       });
     }
-    this.editingId = null;
     this.movieForm.reset();
   }
 }
