@@ -4,6 +4,7 @@ import { Movie } from '../Models/Movie';
 import { CommonModule } from '@angular/common';
 import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { CardComponent } from '../card/card.component';
+import { debounceTime, distinctUntilChanged } from 'rxjs';
 
 @Component({
   selector: 'app-list',
@@ -26,6 +27,9 @@ export class ListComponent implements OnInit {
 
   ngOnInit(): void {
     this.getMovies();
+    this.searchControl.valueChanges
+      .pipe(distinctUntilChanged(), debounceTime(300))
+      .subscribe();
   }
 
   getMovies() {
