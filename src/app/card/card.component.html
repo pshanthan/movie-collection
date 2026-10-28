@@ -2,6 +2,6 @@
   {{ movie.title }} - {{ movie.director }} - {{ movie.runtime | runtime }} -
   {{ movie.releaseDate }} -
   {{ movie.watched }}
-  <button (click)="startEdit(movie)">EDIT</button>
-  <button (click)="deleteMovie(movie.id!)">DELETE</button>
+  <button (click)="(edit)">EDIT</button>
+  <button (click)="(delete)">DELETE</button>
 </div>
