@@ -28,7 +28,15 @@ export class ListComponent implements OnInit {
   ngOnInit(): void {
     this.getMovies();
     this.searchControl.valueChanges
-      .pipe(distinctUntilChanged(), debounceTime(300), switchMap())
+      .pipe(
+        distinctUntilChanged(),
+        debounceTime(300),
+        switchMap((term) =>
+          term
+            ? this.movieService.searchMovie(term)
+            : this.movieService.getMovies(),
+        ),
+      )
       .subscribe((movies) => (this.movies = movies));
   }
 
