@@ -1,22 +1,6 @@
 {
   "movies": [
     {
-      "id": "3",
-      "title": "The Matrix",
-      "director": "Lana Wachowski",
-      "runtime": 136,
-      "releaseDate": "1999-03-31",
-      "watched": true
-    },
-    {
-      "id": "4",
-      "title": "Interstellar",
-      "director": "Christopher Nolan",
-      "runtime": 169,
-      "releaseDate": "2014-11-07",
-      "watched": true
-    },
-    {
       "id": "5",
       "title": "The Shawshank Redemption",
       "director": "Frank Darabont",
