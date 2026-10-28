@@ -1,9 +1,10 @@
-<form [formGroup]="movieForm">
+<form [formGroup]="movieForm" (ngSubmit)="onSubmit()">
   <input formControlName="title" />
   <input formControlName="director" />
   <input formControlName="runtime" />
   <input formControlName="releaseDate" />
   <input type="checkbox" formControlName="watched" />
+  <button type="submit">SUBMIT</button>
 </form>
 
 <div *ngFor="let m of movies">
