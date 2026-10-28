@@ -35,6 +35,7 @@ export class ListComponent implements OnInit {
     });
   }
   startEdit(movie: Movie) {
+    this.editingId = movie.id;
     this.movieForm.patchValue({
       title: movie.title,
       director: movie.director,
