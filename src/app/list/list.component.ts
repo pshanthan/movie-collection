@@ -33,4 +33,9 @@ export class ListComponent implements OnInit {
   getMovies() {
     this.movieService.getMovies().subscribe((movie) => (this.movies = movie));
   }
+  deleteMovie(id: number) {
+    this.movieService.deleteMovie(id).subscribe(() => {
+      this.movies = this.movies.filter((m) => m.id !== id);
+    });
+  }
 }
