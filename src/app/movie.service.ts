@@ -6,4 +6,5 @@ import { Injectable } from '@angular/core';
 })
 export class MovieService {
   constructor(private httpClient: HttpClient) {}
+  apiUrl = 'http://localhost:3000/movies';
 }
