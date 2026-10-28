@@ -1,5 +1,6 @@
 import { Component, signal } from '@angular/core';
 import { MovieService } from '../movie.service';
+import { Movie } from '../Models/Movie';
 
 @Component({
   selector: 'app-list',
@@ -9,5 +10,5 @@ import { MovieService } from '../movie.service';
 })
 export class ListComponent {
   constructor(private movieService: MovieService) {}
-  movies: signal<Movie[]> = [];
+  movies: Movie[] = [];
 }
