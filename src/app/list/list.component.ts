@@ -54,7 +54,11 @@ export class ListComponent implements OnInit {
       releaseDate: raw.releaseDate,
     };
     if (this.editingId) {
-      this.movieService.updateMovie(transformedMovie).subscribe();
+      this.movieService
+        .updateMovie(transformedMovie)
+        .subscribe((updatedMovie) => {
+          this.movies.filter((m) => m.id === this.editingId).map();
+        });
     }
   }
 }
