@@ -3,12 +3,11 @@ import { MovieService } from '../movie.service';
 import { Movie } from '../Models/Movie';
 import { CommonModule } from '@angular/common';
 import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
-import { RuntimePipe } from '../runtime.pipe';
 import { CardComponent } from '../card/card.component';
 
 @Component({
   selector: 'app-list',
-  imports: [CommonModule, ReactiveFormsModule, RuntimePipe, CardComponent],
+  imports: [CommonModule, ReactiveFormsModule, CardComponent],
   templateUrl: './list.component.html',
   styleUrl: './list.component.css',
 })
