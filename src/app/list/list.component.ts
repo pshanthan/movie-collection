@@ -22,7 +22,7 @@ export class ListComponent implements OnInit {
     releaseDate: new FormControl('', { nonNullable: true }),
     watched: new FormControl(false, { nonNullable: true }),
   });
-
+  searchControl = new FormControl('', { nonNullable: true });
   ngOnInit(): void {
     this.getMovies();
   }
