@@ -9,7 +9,7 @@
 
 <div *ngFor="let m of movies">
   <app-card
-    (movie)="(m)"
+    [movie]="m"
     (edit)="startEdit($event)"
     (delete)="deleteMovie($event)"
   ></app-card>
