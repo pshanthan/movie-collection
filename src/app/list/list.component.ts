@@ -2,12 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { MovieService } from '../movie.service';
 import { Movie } from '../Models/Movie';
 import { CommonModule } from '@angular/common';
-import {
-  FormControl,
-  FormControlName,
-  FormGroup,
-  ReactiveFormsModule,
-} from '@angular/forms';
+import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-list',
@@ -39,5 +34,13 @@ export class ListComponent implements OnInit {
       this.movies = this.movies.filter((m) => m.id !== id);
     });
   }
-  startEdit(movie: Movie) {}
+  startEdit(movie: Movie) {
+    this.movieForm.patchValue({
+      title: movie.title,
+      director: movie.director,
+      runtime: String(movie.runtime),
+      watched: movie.watched,
+      releaseDate: movie.releaseDate,
+    });
+  }
 }
