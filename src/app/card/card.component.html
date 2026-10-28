@@ -3,5 +3,5 @@
   {{ movie.releaseDate }} -
   {{ movie.watched }}
   <button (click)="edit.emit(movie)">EDIT</button>
-  <button (click)="delete.emit(movie.id)">DELETE</button>
+  <button (click)="delete.emit(movie.id!)">DELETE</button>
 </div>
