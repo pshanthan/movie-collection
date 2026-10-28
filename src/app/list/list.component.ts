@@ -28,8 +28,8 @@ export class ListComponent implements OnInit {
   ngOnInit(): void {
     this.getMovies();
     this.searchControl.valueChanges
-      .pipe(distinctUntilChanged(), debounceTime(300), switchMap())
-      .subscribe();
+      .pipe(distinctUntilChanged(), debounceTime(300))
+      .subscribe((movies) => (this.movies = movies));
   }
 
   getMovies() {
