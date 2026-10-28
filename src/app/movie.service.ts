@@ -11,4 +11,7 @@ export class MovieService {
   getMovies(): Observable<Movie[]> {
     return this.httpClient.get<Movie[]>(`${this.apiUrl}`);
   }
+  deleteMovie(movie: Movie): Observable<void> {
+    return this.httpClient.delete<void>(`${this.apiUrl}/${movie.id}`);
+  }
 }
