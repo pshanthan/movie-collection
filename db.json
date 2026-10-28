@@ -1,0 +1,124 @@
+{
+  "movies": [
+    {
+      "id": 1,
+      "title": "Inception",
+      "director": "Christopher Nolan",
+      "runtime": 148,
+      "releaseDate": "2010-07-16",
+      "watched": true
+    },
+    {
+      "id": 2,
+      "title": "Dune",
+      "director": "Denis Villeneuve",
+      "runtime": 155,
+      "releaseDate": "2021-10-22",
+      "watched": false
+    },
+    {
+      "id": 3,
+      "title": "The Matrix",
+      "director": "Lana Wachowski",
+      "runtime": 136,
+      "releaseDate": "1999-03-31",
+      "watched": true
+    },
+    {
+      "id": 4,
+      "title": "Interstellar",
+      "director": "Christopher Nolan",
+      "runtime": 169,
+      "releaseDate": "2014-11-07",
+      "watched": true
+    },
+    {
+      "id": 5,
+      "title": "The Shawshank Redemption",
+      "director": "Frank Darabont",
+      "runtime": 142,
+      "releaseDate": "1994-09-23",
+      "watched": true
+    },
+    {
+      "id": 6,
+      "title": "Pulp Fiction",
+      "director": "Quentin Tarantino",
+      "runtime": 154,
+      "releaseDate": "1994-10-14",
+      "watched": false
+    },
+    {
+      "id": 7,
+      "title": "The Dark Knight",
+      "director": "Christopher Nolan",
+      "runtime": 152,
+      "releaseDate": "2008-07-18",
+      "watched": true
+    },
+    {
+      "id": 8,
+      "title": "Parasite",
+      "director": "Bong Joon Ho",
+      "runtime": 132,
+      "releaseDate": "2019-05-30",
+      "watched": false
+    },
+    {
+      "id": 9,
+      "title": "Spirited Away",
+      "director": "Hayao Miyazaki",
+      "runtime": 125,
+      "releaseDate": "2001-07-20",
+      "watched": true
+    },
+    {
+      "id": 10,
+      "title": "The Godfather",
+      "director": "Francis Ford Coppola",
+      "runtime": 175,
+      "releaseDate": "1972-03-24",
+      "watched": true
+    },
+    {
+      "id": 11,
+      "title": "Avengers: Endgame",
+      "director": "Anthony Russo",
+      "runtime": 181,
+      "releaseDate": "2019-04-26",
+      "watched": false
+    },
+    {
+      "id": 12,
+      "title": "Coco",
+      "director": "Lee Unkrich",
+      "runtime": 105,
+      "releaseDate": "2017-11-22",
+      "watched": true
+    },
+    {
+      "id": 13,
+      "title": "Blade Runner 2049",
+      "director": "Denis Villeneuve",
+      "runtime": 163,
+      "releaseDate": "2017-10-06",
+      "watched": false
+    },
+    {
+      "id": 14,
+      "title": "Whiplash",
+      "director": "Damien Chazelle",
+      "runtime": 106,
+      "releaseDate": "2014-10-10",
+      "watched": true
+    },
+    {
+      "id": 15,
+      "title": "Everything Everywhere All at Once",
+      "director": "Daniel Kwan",
+      "runtime": 139,
+      "releaseDate": "2022-03-25",
+      "watched": false
+    }
+  ]
+}
