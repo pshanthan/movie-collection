@@ -5,6 +5,6 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class RuntimePipe implements PipeTransform {
   transform(runtime: number): string {
-    return runtime + 'minutes';
+    return runtime + ' minutes';
   }
 }
