@@ -47,7 +47,6 @@ export class ListComponent implements OnInit {
   onSubmit() {
     const raw = this.movieForm.getRawValue();
     const transformedMovie: Movie = {
-      id: this.editingId,
       title: raw.title,
       director: raw.director,
       runtime: Number(raw.runtime),
