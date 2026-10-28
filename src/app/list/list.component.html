@@ -8,5 +8,5 @@
 </form>
 
 <div *ngFor="let m of movies">
-  <app-card movie="m"></app-card>
+  <app-card (movie)="(m)"></app-card>
 </div>
