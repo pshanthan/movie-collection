@@ -2,10 +2,11 @@ import { Component, EventEmitter, Output } from '@angular/core';
 import { Movie } from '../Models/Movie';
 import { Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { RuntimePipe } from '../runtime.pipe';
 
 @Component({
   selector: 'app-card',
-  imports: [CommonModule],
+  imports: [CommonModule, RuntimePipe],
   templateUrl: './card.component.html',
   styleUrl: './card.component.css',
 })
