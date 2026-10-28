@@ -2,7 +2,12 @@ import { Component, OnInit } from '@angular/core';
 import { MovieService } from '../movie.service';
 import { Movie } from '../Models/Movie';
 import { CommonModule } from '@angular/common';
-import { FormGroup, ReactiveFormsModule } from '@angular/forms';
+import {
+  FormControl,
+  FormControlName,
+  FormGroup,
+  ReactiveFormsModule,
+} from '@angular/forms';
 
 @Component({
   selector: 'app-list',
@@ -13,7 +18,13 @@ import { FormGroup, ReactiveFormsModule } from '@angular/forms';
 export class ListComponent implements OnInit {
   constructor(private movieService: MovieService) {}
   movies: Movie[] = [];
-  movieForm = new FormGroup({});
+  movieForm = new FormGroup({
+    title: new FormControl('', { nonNullable: true }),
+    director: new FormControl('', { nonNullable: true }),
+    runtime: new FormControl('', { nonNullable: true }),
+    releaseDate: new FormControl('', { nonNullable: true }),
+    watched: new FormControl('', { nonNullable: true }),
+  });
 
   ngOnInit(): void {
     this.getMovies();
