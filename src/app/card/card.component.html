@@ -1,7 +1,7 @@
-<div>
-  {{ m.title }} - {{ m.director }} - {{ m.runtime | runtime }} -
-  {{ m.releaseDate }} -
-  {{ m.watched }}
-  <button (click)="startEdit(m)">EDIT</button>
-  <button (click)="deleteMovie(m.id!)">DELETE</button>
+<div *ngIf="movie">
+  {{ movie.title }} - {{ movie.director }} - {{ movie.runtime | runtime }} -
+  {{ movie.releaseDate }} -
+  {{ movie.watched }}
+  <button (click)="startEdit(movie)">EDIT</button>
+  <button (click)="deleteMovie(movie.id!)">DELETE</button>
 </div>
