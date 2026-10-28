@@ -58,8 +58,16 @@ export class ListComponent implements OnInit {
       this.movieService
         .updateMovie(transformedMovie)
         .subscribe((updatedMovie) => {
-          this.movies.filter((m) => m.id === this.editingId).map();
+          this.movies = this.movies.map((m) =>
+            m.id === this.editingId ? updatedMovie : m,
+          );
         });
+    } else {
+      this.movieService.addMovie(transformedMovie).subscribe((addedmovie) => {
+        this.movies = [...this.movies, addedmovie];
+      });
     }
+    this.editingId = null;
+    this.movieForm.reset();
   }
 }
