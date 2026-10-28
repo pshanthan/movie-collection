@@ -1,3 +1,11 @@
+<form [formGroup]="movieForm">
+  <input formControlName="title" />
+  <input formControlName="director" />
+  <input formControlName="runtime" />
+  <input formControlName="releaseDate" />
+  <input formControlName="watched" />
+</form>
+
 <div *ngFor="let m of movies">
   {{ m.title }} - {{ m.director }} - {{ m.runtime }} - {{ m.releaseDate }} -
   {{ m.watched }}
