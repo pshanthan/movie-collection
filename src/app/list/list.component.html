@@ -8,9 +8,5 @@
 </form>
 
 <div *ngFor="let m of movies">
-  {{ m.title }} - {{ m.director }} - {{ m.runtime | runtime }} -
-  {{ m.releaseDate }} -
-  {{ m.watched }}
-  <button (click)="startEdit(m)">EDIT</button>
-  <button (click)="deleteMovie(m.id!)">DELETE</button>
+  <app-card movie="m"></app-card>
 </div>
