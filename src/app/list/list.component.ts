@@ -17,6 +17,7 @@ import {
 })
 export class ListComponent implements OnInit {
   constructor(private movieService: MovieService) {}
+  editingId: number | null = null;
   movies: Movie[] = [];
   movieForm = new FormGroup({
     title: new FormControl('', { nonNullable: true }),
@@ -38,4 +39,5 @@ export class ListComponent implements OnInit {
       this.movies = this.movies.filter((m) => m.id !== id);
     });
   }
+  startEdit(movie: Movie) {}
 }
