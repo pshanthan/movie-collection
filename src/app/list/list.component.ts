@@ -23,7 +23,7 @@ export class ListComponent implements OnInit {
     director: new FormControl('', { nonNullable: true }),
     runtime: new FormControl('', { nonNullable: true }),
     releaseDate: new FormControl('', { nonNullable: true }),
-    watched: new FormControl('', { nonNullable: true }),
+    watched: new FormControl(false, { nonNullable: true }),
   });
 
   ngOnInit(): void {
