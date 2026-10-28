@@ -12,4 +12,7 @@ import { CommonModule } from '@angular/common';
 export class ListComponent {
   constructor(private movieService: MovieService) {}
   movies: Movie[] = [];
+  getMovies() {
+    this.movieService.getMovies().subscribe((movie) => (this.movies = movie));
+  }
 }
