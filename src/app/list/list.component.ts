@@ -54,6 +54,7 @@ export class ListComponent implements OnInit {
       releaseDate: raw.releaseDate,
     };
     if (this.editingId) {
+      transformedMovie.id = this.editingId;
       this.movieService
         .updateMovie(transformedMovie)
         .subscribe((updatedMovie) => {
