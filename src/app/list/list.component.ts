@@ -23,6 +23,7 @@ export class ListComponent implements OnInit {
     watched: new FormControl(false, { nonNullable: true }),
   });
   searchControl = new FormControl('', { nonNullable: true });
+
   ngOnInit(): void {
     this.getMovies();
   }
