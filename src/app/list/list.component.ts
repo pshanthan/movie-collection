@@ -44,4 +44,14 @@ export class ListComponent implements OnInit {
       releaseDate: movie.releaseDate,
     });
   }
+  onSubmit() {
+    const raw = this.movieForm.getRawValue();
+    const transformedMovie = {
+      title: raw.title,
+      director: raw.director,
+      runtime: Number(raw.runtime),
+      watched: raw.watched,
+      releaseDate: raw.releaseDate,
+    };
+  }
 }
