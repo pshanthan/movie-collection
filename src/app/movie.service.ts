@@ -20,4 +20,9 @@ export class MovieService {
   addMovie(movie: Movie): Observable<Movie> {
     return this.httpClient.post<Movie>(`${this.apiUrl}`, movie);
   }
+  searchMovie(searchString: string): Observable<Movie[]> {
+    return this.httpClient.get<Movie[]>(
+      `${this.apiUrl}?title_like=${searchString}`,
+    );
+  }
 }
