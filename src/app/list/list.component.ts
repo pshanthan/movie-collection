@@ -46,7 +46,8 @@ export class ListComponent implements OnInit {
   }
   onSubmit() {
     const raw = this.movieForm.getRawValue();
-    const transformedMovie = {
+    const transformedMovie: Movie = {
+      id: this.editingId,
       title: raw.title,
       director: raw.director,
       runtime: Number(raw.runtime),
@@ -54,7 +55,7 @@ export class ListComponent implements OnInit {
       releaseDate: raw.releaseDate,
     };
     if (this.editingId) {
-      this.movieService.updateMovie().subscribe();
+      this.movieService.updateMovie(transformedMovie).subscribe();
     }
   }
 }
