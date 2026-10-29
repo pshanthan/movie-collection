@@ -14,10 +14,7 @@ import { AuthGuardService } from '../auth-guard.service';
   styleUrl: './list.component.css',
 })
 export class ListComponent implements OnInit {
-  constructor(
-    private movieService: MovieService,
-    private authService: AuthGuardService,
-  ) {}
+  constructor(private movieService: MovieService) {}
   editingId: number | null = null;
   movies: Movie[] = [];
   movieForm = new FormGroup({
