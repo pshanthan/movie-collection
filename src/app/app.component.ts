@@ -10,5 +10,5 @@ import { AuthGuardService } from './auth-guard.service';
 })
 export class AppComponent {
   title = 'movie-collection';
-  constructor(private authService: AuthGuardService) {}
+  constructor(public authService: AuthGuardService) {}
 }
