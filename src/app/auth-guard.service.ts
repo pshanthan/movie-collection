@@ -7,7 +7,7 @@ export class AuthGuardService {
   constructor() {}
   log = false;
   loggedIn() {
-    this.log;
+    return this.log;
   }
   logIn() {
     this.log = true;
