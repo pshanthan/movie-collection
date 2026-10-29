@@ -1,3 +1,7 @@
+<div>
+  <button (click)="login()">logIn</button>
+  <button (click)="logOut()">LogOut</button>
+</div>
 <input [formControl]="searchControl" placeholder="Search Text" />
 <form [formGroup]="movieForm" (ngSubmit)="onSubmit()">
   <input formControlName="title" />

@@ -6,6 +6,6 @@ export const routes: Routes = [
   {
     path: 'list',
     component: ListComponent,
-    canActivate: authGuardGuard,
+    canActivate: [authGuardGuard],
   },
 ];

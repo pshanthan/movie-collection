@@ -5,6 +5,7 @@ import { CommonModule } from '@angular/common';
 import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { CardComponent } from '../card/card.component';
 import { debounceTime, distinctUntilChanged, switchMap } from 'rxjs';
+import { AuthGuardService } from '../auth-guard.service';
 
 @Component({
   selector: 'app-list',
@@ -13,7 +14,10 @@ import { debounceTime, distinctUntilChanged, switchMap } from 'rxjs';
   styleUrl: './list.component.css',
 })
 export class ListComponent implements OnInit {
-  constructor(private movieService: MovieService) {}
+  constructor(
+    private movieService: MovieService,
+    private authService: AuthGuardService,
+  ) {}
   editingId: number | null = null;
   movies: Movie[] = [];
   movieForm = new FormGroup({
