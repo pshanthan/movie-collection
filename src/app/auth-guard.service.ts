@@ -1,9 +1,18 @@
 import { Injectable } from '@angular/core';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class AuthGuardService {
-
-  constructor() { }
+  constructor() {}
+  log = false;
+  loggedIn() {
+    this.log;
+  }
+  logIn() {
+    this.log = true;
+  }
+  logOut() {
+    this.log = false;
+  }
 }
